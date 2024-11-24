@@ -9,6 +9,8 @@ class Entity
 	V value;
 
 public:
+	Entity();
+	Entity(K k);
 	Entity(K k, V v);
 	K getKey();
 	V getValue();
@@ -19,6 +21,20 @@ public:
 	bool operator> (Entity<K, V>& other);
 	bool operator< (Entity<K, V>& other);
 };
+
+template <typename K, typename V>
+Entity<K, V>::Entity()
+{
+	this->key = K();
+	this->value = V();
+}
+
+template <typename K, typename V>
+Entity<K, V>::Entity(K k)
+{
+	this->key = k;
+	this->value = V();
+}
 
 template <typename K, typename V>
 Entity<K, V>::Entity(K k, V v)

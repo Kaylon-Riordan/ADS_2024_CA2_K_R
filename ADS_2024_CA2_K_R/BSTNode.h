@@ -5,12 +5,12 @@ using namespace std;
 template <class T>
 class BSTNode
 {
-	
-	BSTNode<T> *parent;
-	BSTNode<T> *left;
-	BSTNode<T> *right;
+
+	BSTNode<T>* parent;
+	BSTNode<T>* left;
+	BSTNode<T>* right;
 	T data;
-	
+
 public:
 	BSTNode();
 	BSTNode(const BSTNode<T>& other);
@@ -22,8 +22,8 @@ public:
 	BSTNode<T>* getParent();
 	BSTNode<T>* getLeft();
 	BSTNode<T>* getRight();
-	void setLeft(BSTNode<T> *l);
-	void setRight(BSTNode<T> *r);
+	void setLeft(BSTNode<T>* l);
+	void setRight(BSTNode<T>* r);
 	T& getItem();
 	~BSTNode();
 
@@ -33,9 +33,9 @@ template <class T>
 BSTNode<T>::BSTNode(const BSTNode<T>& other)
 {
 	left = right = nullptr;
-	if(other.left != nullptr)
+	if (other.left != nullptr)
 		this->left = new BSTNode<T>(*other.left);
-	if(other.right!=nullptr)
+	if (other.right != nullptr)
 		this->right = new BSTNode<T>(*other.right);
 
 }
@@ -50,7 +50,7 @@ BSTNode<T>* BSTNode<T>::operator=(const BSTNode<T>& other)
 		this->left = new BSTNode<T>(*other.left);
 	if (other.right != nullptr)
 		this->right = new BSTNode<T>(*other.right);
-	
+
 }
 template <class T>
 BSTNode<T>::~BSTNode()
@@ -60,7 +60,7 @@ BSTNode<T>::~BSTNode()
 		delete left;
 		left = nullptr;
 	}
-	if(right!= nullptr)
+	if (right != nullptr)
 	{
 		delete right;
 		right = nullptr;
@@ -89,12 +89,12 @@ BSTNode<T>* BSTNode<T>::getParent()
 	return this->parent;
 }
 template <class T>
-void BSTNode<T>::setLeft(BSTNode<T> *l)
+void BSTNode<T>::setLeft(BSTNode<T>* l)
 {
 	this->left = l;
 }
 template <class T>
-void BSTNode<T>::setRight(BSTNode<T> *r)
+void BSTNode<T>::setRight(BSTNode<T>* r)
 {
 	this->right = r;
 }
@@ -172,4 +172,3 @@ void BSTNode<T>::setItem(T item)
 {
 	this->data = item;
 }
-

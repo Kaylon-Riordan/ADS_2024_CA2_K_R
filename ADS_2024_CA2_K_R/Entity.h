@@ -15,12 +15,9 @@ public:
 	void setKey(K k);
 	void setValue(V v);
 
-	friend bool operator== (const Entity& e1, const Entity& e2);
-	friend bool operator!= (const Entity& e1, const Entity& e2);
-	friend bool operator> (const Entity& e1, const Entity& e2);
-	friend bool operator>= (const Entity& e1, const Entity& e2);
-	friend bool operator< (const Entity& e1, const Entity& e2);
-	friend bool operator<= (const Entity& e1, const Entity& e2);
+	bool operator== (Entity<K, V>& other);
+	bool operator> (Entity<K, V>& other);
+	bool operator< (Entity<K, V>& other);
 };
 
 template <typename K, typename V>
@@ -53,21 +50,17 @@ void Entity<K, V>::setValue(V v)
 }
 
 template <typename K, typename V>
-bool operator== (const Entity<K, V>& e1, const Entity<K, V>& e2)
-{return (e1.value == e2.value);}
+bool Entity<K, V>::operator== (Entity<K, V>& other)
+{
+	return (this->key == other.getKey());
+}
 template <typename K, typename V>
-bool operator!= (const Entity<K, V>& e1, const Entity<K, V>& e2)
-{ return (e1.value != e2.value); }
+bool Entity<K, V>::operator> (Entity<K, V>& other)
+{
+	return (this->key > other.getKey());
+}
 template <typename K, typename V>
-bool operator> (const Entity<K, V>& e1, const Entity<K, V>& e2)
-{ return (e1.value > e2.value); }
-template <typename K, typename V>
-bool operator>= (const Entity<K, V>& e1, const Entity<K, V>& e2)
-{ return (e1.value >= e2.value); }
-template <typename K, typename V>
-bool operator< (const Entity<K, V>& e1, const Entity<K, V>& e2)
-{ return (e1.value < e2.value); }
-template <typename K, typename V>
-bool operator<= (const Entity<K, V>& e1, const Entity<K, V>& e2)
-{ return (e1.value <= e2.value); }
-
+bool Entity<K, V>::operator< (Entity<K, V>& other)
+{
+	return (this->key < other.getKey());
+}

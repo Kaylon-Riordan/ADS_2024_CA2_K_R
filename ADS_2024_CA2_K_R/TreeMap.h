@@ -17,7 +17,7 @@ public:
 	int count();
 
 	bool containsKey(K key);
-	//V& get(K key);
+	V& get(K key);
 	//BinaryTree<K> keySet();
 	//void put(K key, V value);
 	//int size();
@@ -65,5 +65,19 @@ bool TreeMap<K, V>::containsKey(K key)
 		return false;
 	}
 	return true;
+}
+template <typename K, typename V>
+V& TreeMap<K, V>::get(K key)
+{
+	Entity<K, V> entity(key);
 
+	try 
+	{
+		return this->binaryTree.get(entity).getValue();
+	}
+	catch (logic_error)
+	{
+		V notFound = V();
+		return notFound;
+	}
 }

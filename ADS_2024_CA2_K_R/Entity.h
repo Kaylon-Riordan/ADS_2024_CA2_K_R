@@ -12,8 +12,8 @@ public:
 	Entity();
 	Entity(K k);
 	Entity(K k, V v);
-	K getKey();
-	V getValue();
+	K& getKey();
+	V& getValue();
 	void setKey(K k);
 	void setValue(V v);
 
@@ -44,12 +44,12 @@ Entity<K, V>::Entity(K k, V v)
 }
 
 template <typename K, typename V>
-K Entity<K, V>::getKey()
+K& Entity<K, V>::getKey()
 {
 	return this->key;
 }
 template <typename K, typename V>
-V Entity<K, V>::getValue()
+V& Entity<K, V>::getValue()
 {
 	return this->value;
 }

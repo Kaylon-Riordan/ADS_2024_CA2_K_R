@@ -3,22 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B4A6DA95-A2D5-453F-9794-41D53317499F}|..\\ADS_2024_CA2_Testing\\ADS_2024_CA2_Testing.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_Testing\\TestTreeMap.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\TreeMap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|solutionrelative:TreeMap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\BSTNode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|solutionrelative:BSTNode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\crt\\src\\vcruntime\\delete_scalar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4A6DA95-A2D5-453F-9794-41D53317499F}|..\\ADS_2024_CA2_Testing\\ADS_2024_CA2_Testing.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_Testing\\TestTreeMap.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\BinaryTree.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -27,6 +16,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|solutionrelative:Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\BSTNode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|solutionrelative:BSTNode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,50 +33,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "delete_scalar.cpp",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\crt\\src\\vcruntime\\delete_scalar.cpp",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\crt\\src\\vcruntime\\delete_scalar.cpp",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\crt\\src\\vcruntime\\delete_scalar.cpp",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\crt\\src\\vcruntime\\delete_scalar.cpp",
-              "ViewState": "AgIAABMAAAAAAAAAAAAYwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-26T12:26:55.107Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "TestTreeMap.cpp",
               "DocumentMoniker": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_Testing\\TestTreeMap.cpp",
               "RelativeDocumentMoniker": "..\\ADS_2024_CA2_Testing\\TestTreeMap.cpp",
               "ToolTip": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_Testing\\TestTreeMap.cpp",
               "RelativeToolTip": "..\\ADS_2024_CA2_Testing\\TestTreeMap.cpp",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAIwHwAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAmwKEAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-24T18:08:07.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-17T21:40:21.126Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Entity.h",
               "DocumentMoniker": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\Entity.h",
               "RelativeDocumentMoniker": "Entity.h",
@@ -92,39 +76,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "BSTNode.h",
               "DocumentMoniker": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\BSTNode.h",
               "RelativeDocumentMoniker": "BSTNode.h",
               "ToolTip": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\BSTNode.h",
               "RelativeToolTip": "BSTNode.h",
-              "ViewState": "AgIAACgAAAAAAAAAAAAiwD0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-11-25T15:07:50.359Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "BinaryTree.h",
               "DocumentMoniker": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\BinaryTree.h",
               "RelativeDocumentMoniker": "BinaryTree.h",
               "ToolTip": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\BinaryTree.h",
               "RelativeToolTip": "BinaryTree.h",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAANcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKAAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-11-14T10:41:53.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TreeMap.h",
               "DocumentMoniker": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\TreeMap.h",
               "RelativeDocumentMoniker": "TreeMap.h",
               "ToolTip": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\TreeMap.h",
               "RelativeToolTip": "TreeMap.h",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAqwHsAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAJMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-11-24T17:24:17.005Z",
               "EditorCaption": ""

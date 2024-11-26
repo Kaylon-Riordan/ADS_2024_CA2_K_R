@@ -26,7 +26,7 @@ namespace TestTreeMap
 			Assert::IsTrue(treeMap.containsKey(1));
 			Assert::IsTrue(treeMap.containsKey(2));
 		}
-		TEST_METHOD(TestTreeMapRemove)
+		TEST_METHOD(TestTreeMapRemoveKey)
 		{
 			TreeMap<int, string> treeMap;
 			Entity<int, string> A(1, "Pat");
@@ -37,12 +37,12 @@ namespace TestTreeMap
 			Assert::IsTrue(treeMap.containsKey(1));
 			Assert::IsTrue(treeMap.containsKey(2));
 
-			treeMap.remove(A);
+			treeMap.removeKey(1);
 
 			Assert::IsFalse(treeMap.containsKey(1));
 			Assert::IsTrue(treeMap.containsKey(2));
 
-			treeMap.remove(B);
+			treeMap.removeKey(2);
 
 			Assert::IsFalse(treeMap.containsKey(1));
 			Assert::IsFalse(treeMap.containsKey(2));
@@ -63,26 +63,26 @@ namespace TestTreeMap
 			Assert::IsFalse(treeMap.containsKey(1));
 			Assert::IsFalse(treeMap.containsKey(2));
 		}
-		TEST_METHOD(TestTreeMapCount)
+		TEST_METHOD(TestTreeMapSize)
 		{
 			TreeMap<int, string> treeMap;
 			Entity<int, string> A(1, "Pat");
 			Entity<int, string> B(2, "Mat");
 			treeMap.add(A);
 
-			Assert::AreEqual(1, treeMap.count());
+			Assert::AreEqual(1, treeMap.size());
 
 			treeMap.add(B);
 
-			Assert::AreEqual(2, treeMap.count());
+			Assert::AreEqual(2, treeMap.size());
 
-			treeMap.remove(A);
+			treeMap.removeKey(1);
 
-			Assert::AreEqual(1, treeMap.count());
+			Assert::AreEqual(1, treeMap.size());
 
 			treeMap.clear();
 
-			Assert::AreEqual(0, treeMap.count());
+			Assert::AreEqual(0, treeMap.size());
 		}
 
 		TEST_METHOD(TestTreeMapContainsKey)
@@ -100,7 +100,7 @@ namespace TestTreeMap
 			Assert::IsTrue(treeMap.containsKey(1));
 			Assert::IsTrue(treeMap.containsKey(2));
 
-			treeMap.remove(A);
+			treeMap.removeKey(1);
 
 			Assert::IsFalse(treeMap.containsKey(1));
 			Assert::IsTrue(treeMap.containsKey(2));
@@ -157,5 +157,39 @@ namespace TestTreeMap
 		//	Assert::AreEqual(E, treeMap.getBinaryTree().root->getRight()->getLeft()->getItem());
 		//	Assert::AreEqual(F, treeMap.getBinaryTree().root->getRight()->getRight()->getItem());*/
 		//}
+
+		TEST_METHOD(TestTreeMapPut)
+		{
+			TreeMap<int, string> treeMap;
+			Entity<int, string> A(1, "Pat");
+			Entity<int, string> B(2, "Mat");
+			treeMap.add(A);
+			treeMap.add(B);
+			string pat = "Pat";
+			string mat = "Mat";
+			
+			Assert::AreEqual(pat, treeMap.get(1));
+			Assert::AreEqual(mat, treeMap.get(2));
+
+			treeMap.put(1, mat);
+			treeMap.put(2, pat);
+
+			Assert::AreEqual(mat, treeMap.get(1));
+			Assert::AreEqual(pat, treeMap.get(2));
+		}
+
+		TEST_METHOD(TestTreeMapSquareBrackets)
+		{
+			TreeMap<int, string> treeMap;
+			Entity<int, string> A(1, "Pat");
+			Entity<int, string> B(2, "Mat");
+			treeMap.add(A);
+			treeMap.add(B);
+			string pat = "Pat";
+			string mat = "Mat";
+
+			Assert::AreEqual(pat, treeMap[1]);
+			Assert::AreEqual(mat, treeMap[2]);
+		}
 	};
 }

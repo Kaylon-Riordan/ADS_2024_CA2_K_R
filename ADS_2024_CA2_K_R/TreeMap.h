@@ -13,7 +13,7 @@ public:
 
 	BinaryTree<Entity<K, V>>& getBinaryTree();
 
-	void add(Entity<K, V>& entity);
+	void put(K key, V value);
 	bool removeKey(K key);
 	void clear();
 	int size();
@@ -24,7 +24,6 @@ public:
 	BinaryTree<K> keySet();
 	BSTNode<K>* keySetNode(const BSTNode<Entity<K, V>>* other);
 
-	void put(K key, V value);
 	V& operator[](K key);
 };
 
@@ -41,9 +40,17 @@ BinaryTree<Entity<K, V>>& TreeMap<K, V>::getBinaryTree()
 }
 
 template <typename K, typename V>
-void TreeMap<K, V>::add(Entity<K, V>& entity)
+void TreeMap<K, V>::put(K key, V value)
 {
-	this->binaryTree.add(entity);
+	Entity<K, V> entity(key, value);
+	if (containsKey(key))
+	{
+		this->binaryTree.get(entity).setValue(value);
+	}
+	else
+	{
+		this->binaryTree.add(entity);
+	}
 }
 template <typename K, typename V>
 bool TreeMap<K, V>::removeKey(K key)
@@ -124,17 +131,6 @@ BSTNode<K>* TreeMap<K, V>::keySetNode(const BSTNode<Entity<K, V>>* other)
 	}
 
 	return keyNode;
-}
-
-template <typename K, typename V>
-void TreeMap<K, V>::put(K key, V value)
-{
-	if (containsKey(key))
-	{
-		Entity<K, V> entity(key);
-		Entity<K, V>& nodeItem = this->binaryTree.get(entity);
-		nodeItem.setValue(value);
-	}
 }
 
 template <typename K, typename V>

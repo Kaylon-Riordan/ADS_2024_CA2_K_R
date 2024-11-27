@@ -22,7 +22,7 @@ public:
 	V& get(K key);
 
 	BinaryTree<K> keySet();
-	BSTNode<K> keySetNode(const BSTNode <Entity<K, V>>& other);
+	BSTNode<K>* keySetNode(const BSTNode<Entity<K, V>>* other);
 
 	void put(K key, V value);
 	V& operator[](K key);
@@ -92,45 +92,39 @@ V& TreeMap<K, V>::get(K key)
 	}
 }
 
-//template <typename K, typename V>
-//BinaryTree<K> TreeMap<K, V>::keySet()
-//{
-//	BinaryTree<K> keyTree;
-//
-//	keyTree.root = nullptr;
-//	if (this->binaryTree.root != nullptr)
-//	{
-//		BinaryTree<Entity<K, V>> tree = this->binaryTree;
-//		BSTNode<K> newRoot = keySetNode(*tree.root);
-//		keyTree.root = &newRoot;
-//	}
-//
-//	return keyTree;
-//}
-//template <typename K, typename V>
-//BSTNode<K> TreeMap<K, V>::keySetNode(const BSTNode< Entity<K, V>>& other)
-//{
-//	BSTNode<K> keyNode;
-//	BSTNode< Entity<K, V>> otherNode = other;
-//
-//	keyNode.setItem(otherNode.getItem().getKey());
-//
-//	keyNode.setLeft(nullptr);
-//	keyNode.setRight(nullptr);
-//	if (otherNode.getLeft() != nullptr)
-//	{
-//		BSTNode<Entity<K, V>>* otherLeft = otherNode.getLeft();
-//		BSTNode<K> keyNodeLeft = keySetNode(*otherLeft);
-//		keyNode.setLeft(&keyNodeLeft);
-//	}
-//	if (otherNode.getRight() != nullptr)
-//	{
-//		BSTNode<Entity<K, V>>* otherRight = otherNode.getRight();
-//		BSTNode<K> keyNodeRight = keySetNode(*otherRight);
-//		keyNode.setRight(&keyNodeRight);
-//	}
-//	return keyNode;
-//}
+template <typename K, typename V>
+BinaryTree<K> TreeMap<K, V>::keySet()
+{
+	BinaryTree<K> keyTree;
+	BinaryTree<Entity<K, V>> otherTree = this->binaryTree;
+
+	keyTree.root = nullptr;
+	if (otherTree.root != nullptr)
+	{
+		keyTree.root = keySetNode(otherTree.root);
+	}
+
+	return keyTree;
+}
+template <typename K, typename V>
+BSTNode<K>* TreeMap<K, V>::keySetNode(const BSTNode<Entity<K, V>>* other)
+{
+	BSTNode<Entity<K, V>> otherNode = *other;
+	BSTNode<K>* keyNode = new BSTNode<K>(otherNode.getItem().getKey());
+
+	keyNode->setLeft(nullptr);
+	keyNode->setRight(nullptr);
+	if (otherNode.getLeft() != nullptr)
+	{
+		keyNode->setLeft(keySetNode(otherNode.getLeft()));
+	}
+	if (otherNode.getRight() != nullptr)
+	{
+		keyNode->setRight(keySetNode(otherNode.getRight()));
+	}
+
+	return keyNode;
+}
 
 template <typename K, typename V>
 void TreeMap<K, V>::put(K key, V value)

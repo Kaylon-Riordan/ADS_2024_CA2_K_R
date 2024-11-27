@@ -10,13 +10,7 @@ int main()
 	string pat = "Pat";
 	string mat = "Mat";
 
-	cout << treeMap.get(1) << endl;
-	cout << treeMap.get(2) << endl;
+	BinaryTree<int> keySet = treeMap.keySet();
 
-	treeMap.put(1, mat);
-	treeMap.put(2, pat);
-
-	cout << treeMap.get(1) << endl;
-	cout << treeMap.get(2) << endl;
 	return 0;
 }

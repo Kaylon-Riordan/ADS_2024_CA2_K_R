@@ -126,37 +126,26 @@ namespace TestTreeMap
 			Assert::AreEqual(notFound, treeMap.get(3));
 		}
 
-		//TEST_METHOD(TestTreeMapKeySet)
-		//{
-		//	TreeMap<int, string> treeMap;
-		//	Entity<int, string> A(1, "Pat");
-		//	Entity<int, string> B(2, "Mat");
-		//	Entity<int, string> C(3, "Ted");
-		//	Entity<int, string> D(4, "Bill");
-		//	Entity<int, string> E(5, "Jim");
-		//	Entity<int, string> F(6, "Roy");
+		TEST_METHOD(TestTreeMapKeySet)
+		{
+			TreeMap<int, string> treeMap;
+			Entity<int, string> A(1, "Pat");
+			Entity<int, string> B(2, "Mat");
+			Entity<int, string> C(3, "Kat");
 
-		//	treeMap.add(C);
-		//	treeMap.add(B);
-		//	treeMap.add(A);
-		//	treeMap.add(E);
-		//	treeMap.add(D);
-		//	treeMap.add(F);
+			treeMap.add(B);
+			treeMap.add(A);
+			treeMap.add(C);
 
-		//	BinaryTree<int> keySet = treeMap.keySet();
+			BinaryTree<int> keySet = treeMap.keySet();
 
-		//	/*Assert::AreEqual(treeMap.getBinaryTree().root->getItem().getKey(), keySet.root->getItem());*/
-
-		//	Assert::AreEqual(treeMap.getBinaryTree().root->getLeft()->getItem().getKey(), 3);
-		//	/*Assert::AreEqual(3, keySet.root->getItem());*/
-
-		//	/*Assert::AreEqual(A, treeMap.getBinaryTree().root->getItem());
-		//	Assert::AreEqual(B, treeMap.getBinaryTree().root->getLeft()->getItem());
-		//	Assert::AreEqual(C, treeMap.getBinaryTree().root->getLeft()->getLeft()->getItem());
-		//	Assert::AreEqual(D, treeMap.getBinaryTree().root->getRight()->getItem());
-		//	Assert::AreEqual(E, treeMap.getBinaryTree().root->getRight()->getLeft()->getItem());
-		//	Assert::AreEqual(F, treeMap.getBinaryTree().root->getRight()->getRight()->getItem());*/
-		//}
+			Assert::AreEqual(2, treeMap.getBinaryTree().root->getItem().getKey());
+			Assert::AreEqual(2, keySet.root->getItem());
+			Assert::AreEqual(1, treeMap.getBinaryTree().root->getLeft()->getItem().getKey());
+			Assert::AreEqual(1, keySet.root->getLeft()->getItem());
+			Assert::AreEqual(3, treeMap.getBinaryTree().root->getRight()->getItem().getKey());
+			Assert::AreEqual(3, keySet.root->getRight()->getItem());
+		}
 
 		TEST_METHOD(TestTreeMapPut)
 		{

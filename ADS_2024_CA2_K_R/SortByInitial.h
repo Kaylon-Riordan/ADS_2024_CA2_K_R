@@ -6,3 +6,6 @@
 #include <string>
 
 void sortByInitial();
+TreeMap<char, string> readFile();
+void printKeys(BinaryTree<char> tree);
+void printAll(BinaryTree<Entity<char, string>> tree);

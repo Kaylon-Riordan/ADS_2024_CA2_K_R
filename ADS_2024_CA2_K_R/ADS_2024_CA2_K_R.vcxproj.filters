@@ -30,12 +30,18 @@
     <ClInclude Include="SortByInitial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CCSVMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SortByInitial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSVMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -3,17 +3,25 @@ using namespace std;
 
 void sortByInitial()
 {
+	TreeMap<char, string> treeMap = readFile();
+
+	printKeys(treeMap.keySet());
+	printAll(treeMap.getBinaryTree());
+}
+
+TreeMap<char, string> readFile()
+{
 	TreeMap<char, string> treeMap;
 
 	ifstream read;
-	read.open("Text.txt");
+	read.open("..\\Text.txt");
 	string word;
 	while (read >> word)
 	{
-		for (char& letter : word) 
+		for (char& letter : word)
 		{
-			if (letter >= 'a' && letter <= 'z'){}
-			else if (letter >= 'A' && letter <= 'Z') 
+			if (letter >= 'a' && letter <= 'z') {}
+			else if (letter >= 'A' && letter <= 'Z')
 			{
 				letter += 32;
 			}
@@ -36,8 +44,16 @@ void sortByInitial()
 		}
 	}
 
+	return treeMap;
+}
+
+void printKeys(BinaryTree<char> tree)
+{
 	cout << "Keys in order: " << endl;
-	treeMap.keySet().printInOrder();
+	tree.printInOrder();
+}
+void printAll(BinaryTree<Entity<char, string>> tree)
+{
 	cout << endl << "Keys and values pre order: " << endl;
-	treeMap.getBinaryTree().printPreOrder();
+	tree.printPreOrder();
 }

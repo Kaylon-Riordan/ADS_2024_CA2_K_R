@@ -3,15 +3,15 @@ using namespace std;
 
 void sortByInitial()
 {
-	TreeMap<char, string> treeMap = readFile();
+	TreeMap<char, BinaryTree<string>> treeMap = readFile();
 
 	printKeys(treeMap.keySet());
 	printAll(treeMap.getBinaryTree());
 }
 
-TreeMap<char, string> readFile()
+TreeMap<char, BinaryTree<string>> readFile()
 {
-	TreeMap<char, string> treeMap;
+	TreeMap<char, BinaryTree<string>> treeMap;
 
 	ifstream read;
 	read.open("..\\Text.txt");
@@ -33,14 +33,14 @@ TreeMap<char, string> readFile()
 
 		if (!treeMap.containsKey(word[0]))
 		{
-			treeMap.put(word[0], word);
+			treeMap.put(word[0], BinaryTree<string>());
 		}
-		else
+		try {
+			treeMap.get(word[0]).get(word);
+		}
+		catch (logic_error)
 		{
-			if (treeMap.get(word[0]).find(", " + word) == std::string::npos && treeMap.get(word[0]).find(word + ", ") == std::string::npos)
-			{
-				treeMap.get(word[0]) += ", " + word;
-			}
+			treeMap.get(word[0]).add(word);
 		}
 	}
 
@@ -52,7 +52,7 @@ void printKeys(BinaryTree<char> tree)
 	cout << "Keys in order: " << endl;
 	tree.printInOrder();
 }
-void printAll(BinaryTree<Entity<char, string>> tree)
+void printAll(BinaryTree<Entity<char, BinaryTree<string>>> tree)
 {
 	cout << endl << "Keys and values pre order: " << endl;
 	tree.printPreOrder();

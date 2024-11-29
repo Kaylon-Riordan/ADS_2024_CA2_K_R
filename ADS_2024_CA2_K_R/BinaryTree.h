@@ -25,6 +25,23 @@ public:
 	void printPostOrder(BSTNode<T>* node);
 	T* toArray();
 	~BinaryTree();
+	friend std::ostream& operator<<(std::ostream& out, const BinaryTree<T>& tree) {
+
+		BinaryTree<T> copyTree(tree);
+		T* array = copyTree.toArray();
+		out << "{";
+		for (int i = 0; i < copyTree.count(); i++)
+		{
+			T item = array[i];
+			if (i > 0)
+			{
+				out << ", ";
+			}
+			out << item;
+		}
+		out << "}";
+		return out;
+	}
 };
 
 template <class T>

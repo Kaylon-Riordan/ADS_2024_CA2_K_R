@@ -3,28 +3,27 @@
 
 int main()
 {
-	sortByInitial();
-	/*BinaryTree<int> tree;
-	int one = 1;
-	int two = 2;
-	int three = 3;
-	int four = 4;
-	int five = 5;
-	int six = 6;
-	int seven = 7;
-	tree.add(four);
-	tree.add(two);
-	tree.add(one);
-	tree.add(three);
-	tree.add(six);
-	tree.add(five);
-	tree.add(seven);
+	int input;
+	do 
+	{
+		cout << "\nWhich class would you like to run: \n1: Sort words in text file by their first letter. \n2: Sort car data from CSV file. \n0: Exit. \nChoice:   ";
 
-	tree.printInOrder();
-	cout << endl;
-	tree.printPostOrder();
-	cout << endl;
-	tree.printPreOrder();*/
+		cin >> input;
+
+		switch (input) 
+		{
+		case 1:
+			sortByInitial();
+			break;
+		case 2:
+			//CSVMenu();
+			break;
+		default:
+			cout << "Unrecognised input, please try again.";
+			break;
+		}
+	} 
+	while (input != 0);
 
 	return 0;
 }

@@ -5,8 +5,52 @@ void sortByInitial()
 {
 	TreeMap<char, BinaryTree<string>> treeMap = readFile();
 
-	printKeys(treeMap.keySet());
-	printAll(treeMap.getBinaryTree());
+	int input;
+	do
+	{
+		cout << "\nWhat would you like to view: \n1: View keys. \n2: View all data. \n0: Exit. \nChoice:   ";
+
+		cin >> input;
+
+		switch (input)
+		{
+		case 1:
+			printKeys(treeMap.keySet(), chooseSortOrder());
+			break;
+		case 2:
+			printAll(treeMap.getBinaryTree(), chooseSortOrder());
+			break;
+		default:
+			cout << "Unrecognised input, please try again.";
+			break;
+		}
+	} while (input != 0);
+}
+int chooseSortOrder()
+{
+	int input;
+	do
+	{
+		cout << "\nHow would you like the data sorted: \n1: In order. \n2: Pre order. \n3: Post order. \nChoice:   ";
+
+		cin >> input;
+
+		switch (input)
+		{
+		case 1:
+			return 1;
+			break;
+		case 2:
+			return 2;
+			break;
+		case 3:
+			return 3;
+			break;
+		default:
+			cout << "Unrecognised input, please try again.";
+			break;
+		}
+	} while (true);
 }
 
 TreeMap<char, BinaryTree<string>> readFile()
@@ -47,13 +91,33 @@ TreeMap<char, BinaryTree<string>> readFile()
 	return treeMap;
 }
 
-void printKeys(BinaryTree<char> tree)
+void printKeys(BinaryTree<char> tree, int sort)
 {
-	cout << "Keys in order: " << endl;
-	tree.printInOrder();
+	switch (sort)
+	{
+	case 1:
+		tree.printInOrder();
+		break;
+	case 2:
+		tree.printPreOrder();
+		break;
+	default:
+		tree.printPostOrder();
+		break;
+	}
 }
-void printAll(BinaryTree<Entity<char, BinaryTree<string>>> tree)
+void printAll(BinaryTree<Entity<char, BinaryTree<string>>> tree, int sort)
 {
-	cout << endl << "Keys and values pre order: " << endl;
-	tree.printPreOrder();
+	switch (sort)
+	{
+	case 1:
+		tree.printInOrder();
+		break;
+	case 2:
+		tree.printPreOrder();
+		break;
+	default:
+		tree.printPostOrder();
+		break;
+	}
 }

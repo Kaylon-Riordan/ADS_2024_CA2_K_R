@@ -106,6 +106,7 @@ BinaryTree<K> TreeMap<K, V>::keySet()
 	BinaryTree<Entity<K, V>> otherTree = this->binaryTree;
 
 	keyTree.root = nullptr;
+
 	if (otherTree.root != nullptr)
 	{
 		keyTree.root = keySetNode(otherTree.root);

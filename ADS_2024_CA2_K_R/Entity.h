@@ -17,9 +17,15 @@ public:
 	void setKey(K k);
 	void setValue(V v);
 
+	void print();
+
 	bool operator== (Entity<K, V>& other);
 	bool operator> (Entity<K, V>& other);
 	bool operator< (Entity<K, V>& other);
+	friend std::ostream& operator<<(std::ostream& out, const Entity<K, V>& entity) {
+		out << "Key: " << entity.key << " | Value: " << entity.value;
+		return out;
+	}
 };
 
 template <typename K, typename V>
@@ -63,6 +69,12 @@ template <typename K, typename V>
 void Entity<K, V>::setValue(V v)
 {
 	this->value = v;
+}
+
+template <typename K, typename V>
+void Entity<K, V>::print()
+{
+	cout << "Key: " << this->key << " | Value: " << this->value << endl;
 }
 
 template <typename K, typename V>

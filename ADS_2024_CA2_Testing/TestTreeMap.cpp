@@ -7,25 +7,6 @@ namespace TestTreeMap
 {
 	TEST_CLASS(TestTreeMap)
 	{
-		TEST_METHOD(TestTreeMapAdd)
-		{
-			TreeMap<int, string> treeMap;
-			string pat = "Pat";
-			string mat = "Mat";
-
-			Assert::IsFalse(treeMap.containsKey(1));
-			Assert::IsFalse(treeMap.containsKey(2));
-
-			treeMap.put(1, pat);
-
-			Assert::IsTrue(treeMap.containsKey(1));
-			Assert::IsFalse(treeMap.containsKey(2));
-
-			treeMap.put(2, mat);
-
-			Assert::IsTrue(treeMap.containsKey(1));
-			Assert::IsTrue(treeMap.containsKey(2));
-		}
 		TEST_METHOD(TestTreeMapPut)
 		{
 			TreeMap<int, string> treeMap;

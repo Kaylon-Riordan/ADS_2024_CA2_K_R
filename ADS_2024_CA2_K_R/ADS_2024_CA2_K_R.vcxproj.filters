@@ -27,10 +27,13 @@
     <ClInclude Include="TreeMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SortByInitial.h">
+    <ClInclude Include="TXTMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CCSVMenu.h">
+    <ClInclude Include="CSVMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Car.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,7 +41,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SortByInitial.cpp">
+    <ClCompile Include="TXTMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CSVMenu.cpp">

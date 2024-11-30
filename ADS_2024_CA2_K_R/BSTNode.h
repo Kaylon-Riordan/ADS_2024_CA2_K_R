@@ -5,7 +5,6 @@ using namespace std;
 template <class T>
 class BSTNode
 {
-
 	BSTNode<T>* parent;
 	BSTNode<T>* left;
 	BSTNode<T>* right;
@@ -26,7 +25,6 @@ public:
 	void setRight(BSTNode<T>* r);
 	T& getItem();
 	~BSTNode();
-
 };
 
 template <class T>

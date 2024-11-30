@@ -1,25 +1,30 @@
 #include "TreeMap.h"
-#include "SortByInitial.h"
+#include "TXTMenu.h"
+#include "CSVMenu.h"
 
 int main()
 {
 	int input;
 	do 
 	{
-		cout << "\nWhich class would you like to run: \n1: Sort words in text file by their first letter. \n2: Sort car data from CSV file. \n0: Exit. \nChoice:   ";
+		cout << "\nWhich class would you like to run: \n1: Sort words from text file by their first letter. \n2: Sort car data from CSV file. \n0: Exit. \nChoice:   ";
 
 		cin >> input;
+		cout << endl;
 
 		switch (input) 
 		{
+		case 0:
+			cout << "Exiting.";
+			break;
 		case 1:
 			sortByInitial();
 			break;
 		case 2:
-			//CSVMenu();
+			sortByIndexOrFilter();
 			break;
 		default:
-			cout << "Unrecognised input, please try again.";
+			cout << "Unrecognised input, please try again.\n";
 			break;
 		}
 	} 

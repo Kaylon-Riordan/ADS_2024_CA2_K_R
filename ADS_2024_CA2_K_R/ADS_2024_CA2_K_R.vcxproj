@@ -24,14 +24,12 @@
     <ClInclude Include="Car.h" />
     <ClInclude Include="CSVMenu.h" />
     <ClInclude Include="Entity.h" />
-    <ClInclude Include="Print.h" />
     <ClInclude Include="TXTMenu.h" />
     <ClInclude Include="TreeMap.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CSVMenu.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Print.cpp" />
     <ClCompile Include="TXTMenu.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

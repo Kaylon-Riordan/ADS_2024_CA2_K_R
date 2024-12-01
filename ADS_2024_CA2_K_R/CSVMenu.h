@@ -22,9 +22,7 @@ void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap);
 int chooseTreeSortOrder();
 
 TreeMap<string, carDetails> chooseFilterField(TreeMap<string, carDetails> tree);
-//TreeMap<string, carDetails> chooseFilter(TreeMap<string, carDetails> tree, int field);
-template <class T>
-void filterNodes(BSTNode<Entity<string, carDetails>>* root, TreeMap<string, carDetails> tree, int field);
+void filterNodes(BSTNode<Entity<string, carDetails>>* root, TreeMap<string, carDetails>& tree, int field, string input);
 
 TreeMap<string, carDetails> readCSVFile();
 

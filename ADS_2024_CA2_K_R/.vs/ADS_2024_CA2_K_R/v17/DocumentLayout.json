@@ -11,20 +11,20 @@
       "RelativeMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|solutionrelative:CSVMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|solutionrelative:Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\TXTMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|solutionrelative:TXTMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\BSTNode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|solutionrelative:BSTNode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\BinaryTree.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|solutionrelative:BinaryTree.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|solutionrelative:Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\TXTMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|solutionrelative:TXTMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F760864E-4131-48B1-BD93-785599BD1ED6}|ADS_2024_CA2_K_R.vcxproj|C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\TreeMap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -59,8 +59,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-17T21:40:21.126Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -70,7 +69,7 @@
               "RelativeDocumentMoniker": "CSVMenu.cpp",
               "ToolTip": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\CSVMenu.cpp",
               "RelativeToolTip": "CSVMenu.cpp",
-              "ViewState": "AgIAABQAAAAAAAAAAAAqwD8AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-30T14:30:17.107Z",
               "EditorCaption": ""
@@ -83,7 +82,7 @@
               "RelativeDocumentMoniker": "CSVMenu.h",
               "ToolTip": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\CSVMenu.h",
               "RelativeToolTip": "CSVMenu.h",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABcAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-11-30T14:30:24.438Z",
               "EditorCaption": ""
@@ -98,12 +97,11 @@
               "RelativeToolTip": "TXTMenu.cpp",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAGQAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-30T14:40:03.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T14:40:03.767Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "TXTMenu.h",
               "DocumentMoniker": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\TXTMenu.h",
               "RelativeDocumentMoniker": "TXTMenu.h",
@@ -111,12 +109,11 @@
               "RelativeToolTip": "TXTMenu.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-30T14:40:02.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T14:40:02.789Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Entity.h",
               "DocumentMoniker": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\Entity.h",
               "RelativeDocumentMoniker": "Entity.h",
@@ -124,12 +121,11 @@
               "RelativeToolTip": "Entity.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-25T12:12:50.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T12:12:50.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "BSTNode.h",
               "DocumentMoniker": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\BSTNode.h",
               "RelativeDocumentMoniker": "BSTNode.h",
@@ -142,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "BinaryTree.h",
               "DocumentMoniker": "C:\\Users\\kaylo\\OneDrive\\Documents\\GitHub\\ADS_2024_CA2_K_R\\ADS_2024_CA2_K_R\\BinaryTree.h",
               "RelativeDocumentMoniker": "BinaryTree.h",
@@ -163,8 +159,7 @@
               "RelativeToolTip": "TreeMap.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-24T17:24:17.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T17:24:17.005Z"
             }
           ]
         }

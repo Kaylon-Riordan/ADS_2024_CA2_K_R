@@ -28,7 +28,7 @@ void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap)
 			//write(treeMap.keySet());
 			break;
 		case 3:
-			printTree(chooseFilter(treeMap, chooseFilterField()).getBinaryTree(), chooseTreeSortOrder());
+			printTree(chooseFilterField(treeMap).getBinaryTree(), chooseTreeSortOrder());
 			break;
 		default:
 			cout << "Unrecognised input, please try again.\n";
@@ -61,113 +61,113 @@ int chooseTreeSortOrder()
 		}
 	} while (true);
 }
-TreeMap<string, carDetails> chooseFilterField()
+TreeMap<string, carDetails> chooseFilterField(TreeMap<string, carDetails> tree)
 {
-	int input;
+	int field;
 	do
 	{
 		cout << "\nWhat field would you like to filter by: \n1: ID. \n2: Make. \n3: Model. \n4: Year. \n5: Owner. \nChoice:   ";
 
-		cin >> input;
+		cin >> field;
 		cout << endl;
 
-		switch (input)
+		TreeMap<string, carDetails> newTree;
+		switch (field)
 		{
 		case 1:
-			return 1;
-		case 2:
-			return 2;
-		case 3:
-			return 3;
-		case 4:
-			return 4;
-		case 5:
-			return 5;
+			do
+			{
+				string input;
+				cout << "\nWhat ID would you like to filter for: \nChoice:   ";
+
+				cin >> input;
+				cout << endl;
+
+				if (tree.containsKey(input))
+				{
+					newTree.put(input, tree.get(input));
+					return newTree;
+				}
+				else
+				{
+					cout << "Unrecognised input, please try again.\n";
+				}
+
+			} while (true);
+
+		break;
+		case 2: case 3: case 4: case 5:
+ 			do
+			{
+				string input;
+				cout << "\nWhat make would you like to filter for: \nChoice:   ";
+
+				getline(cin, input);
+				cout << endl;
+
+				filterNodes(tree.getBinaryTree().root, newTree, field, input);
+
+				if (newTree.size() != 0)
+				{
+					return newTree;
+				}
+				else
+				{
+					cout << "Unrecognised input, please try again.\n";
+				}
+
+			} while (true);
+
+			break;
 		default:
 			cout << "Unrecognised input, please try again.\n";
 			break;
 		}
 	} while (true);
 }
-TreeMap<string, carDetails> chooseFilter(TreeMap<string, carDetails> tree, int field)
+void filterNodes(BSTNode<Entity<string, carDetails>>* root, TreeMap<string, carDetails>& tree, int field, string input)
 {
-	TreeMap<string, carDetails> newTree;
+	BSTNode<Entity<string, carDetails>> node = *root;
 	switch (field)
 	{
-	case 1:
-		do
-		{
-			string input;
-			cout << "\nWhat ID would you like to filter for: \nChoice:   ";
-
-			cin >> input;
-			cout << endl;
-
-			if (tree.containsKey(input))
-			{
-				newTree.put(input, tree.get(input));
-				return newTree;
-			}
-			else
-			{
-				cout << "Unrecognised input, please try again.\n";
-			}
-
-		} while (true);
-
-		break;
 	case 2:
-		do
+		if (node.getItem().getValue().make == input)
 		{
-			string input;
-			cout << "\nWhat Make would you like to filter for: \nChoice:   ";
-
-			cin >> input;
-			cout << endl;
-
-			filterNodes(tree.getBinaryTree().root, newTree);
-
-			if(newTree.size() != 0)
-			{
-				return newTree;
-			}
-			else
-			{
-				cout << "Unrecognised input, please try again.\n";
-			}
-
-		} while (true);
-
+			tree.put(node.getItem().getKey(), node.getItem().getValue());
+		}
 		break;
 	case 3:
-		//tree.printPostOrder();
+		if (node.getItem().getValue().model == input)
+		{
+			tree.put(node.getItem().getKey(), node.getItem().getValue());
+		}
 		break;
 	case 4:
-		//tree.printPreOrder();
+		if (to_string(node.getItem().getValue().year) == input)
+		{
+			tree.put(node.getItem().getKey(), node.getItem().getValue());
+		}
 		break;
 	case 5:
-		//tree.printPostOrder();
+		if (node.getItem().getValue().owner == input)
+		{
+			tree.put(node.getItem().getKey(), node.getItem().getValue());
+		}
 		break;
 	default:
-		cout << "Error occured with sorting.\n";
+		cout << "Error with field input.\n";
 		break;
 	}
-}
-void filterNodes(BSTNode<Entity<string, carDetails>>* root, TreeMap<string, carDetails> tree, int field)
-{
-	BSTNode<T> n = *node;
-	if (n.getLeft() != nullptr)
+
+	if (node.getLeft() != nullptr)
 	{
-		this->printInOrder(n.getLeft());
+		filterNodes(node.getLeft(), tree, field, input);
 	}
-	cout << n.getItem() << endl;
-	if (n.getRight() != nullptr)
+	if (node.getRight() != nullptr)
 	{
-		this->printInOrder(n.getRight());
+		filterNodes(node.getRight(), tree, field, input);
 	}
 }
-
-
 
 TreeMap<string, carDetails> readCSVFile()
 {

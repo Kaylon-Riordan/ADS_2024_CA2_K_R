@@ -8,6 +8,7 @@ void sortByIndexOrFilter()
 
 void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap)
 {
+	Print write;
 	int input;
 	do
 	{
@@ -22,10 +23,10 @@ void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap)
 			cout << "Returning to main.\n";
 			break;
 		case 1:
-			print(treeMap.keySet(), chooseSortOrder());
+			write(treeMap.getBinaryTree());
 			break;
 		case 2:
-			//print(treeMap.keySet(), chooseSortOrder());
+			//write(treeMap.keySet());
 			break;
 		case 3:
 			//print(treeMap.getBinaryTree(), chooseSortOrder());
@@ -35,34 +36,6 @@ void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap)
 			break;
 		}
 	} while (input != 0);
-}
-
-int chooseSortOrder()
-{
-	int input;
-	do
-	{
-		cout << "\nHow would you like the data sorted: \n1: In order. \n2: Pre order. \n3: Post order. \nChoice:   ";
-
-		cin >> input;
-		cout << endl;
-
-		switch (input)
-		{
-		case 1:
-			return 1;
-			break;
-		case 2:
-			return 2;
-			break;
-		case 3:
-			return 3;
-			break;
-		default:
-			cout << "Unrecognised input, please try again.\n";
-			break;
-		}
-	} while (true);
 }
 
 TreeMap<string, carDetails> readCSVFile()
@@ -94,24 +67,4 @@ TreeMap<string, carDetails> readCSVFile()
 		treeMap.put(id, details);
 	}
 	return treeMap;
-}
-
-template <class T>
-void print(BinaryTree<T> tree, int sort)
-{
-	switch (sort)
-	{
-	case 1:
-		tree.printInOrder();
-		break;
-	case 2:
-		tree.printPreOrder();
-		break;
-	case 3:
-		tree.printPostOrder();
-		break;
-	default:
-		cout << "Error occured with sorting.\n";
-		break;
-	}
 }

@@ -8,6 +8,7 @@ void sortByInitial()
 
 void chooseTree(TreeMap<char, BinaryTree<string>> treeMap)
 {
+	Print write;
 	int input;
 	do
 	{
@@ -22,43 +23,16 @@ void chooseTree(TreeMap<char, BinaryTree<string>> treeMap)
 			cout << "Returning to main.\n";
 			break;
 		case 1:
-			print(treeMap.keySet(), chooseSortOrder());
+			write(treeMap.keySet());
 			break;
 		case 2:
-			print(treeMap.getBinaryTree(), chooseSortOrder());
+			write(treeMap.getBinaryTree());
 			break;
 		default:
 			cout << "Unrecognised input, please try again.\n";
 			break;
 		}
 	} while (input != 0);
-}
-int chooseSortOrder()
-{
-	int input;
-	do
-	{
-		cout << "\nHow would you like the data sorted: \n1: In order. \n2: Pre order. \n3: Post order. \nChoice:   ";
-
-		cin >> input;
-		cout << endl;
-
-		switch (input)
-		{
-		case 1:
-			return 1;
-			break;
-		case 2:
-			return 2;
-			break;
-		case 3:
-			return 3;
-			break;
-		default:
-			cout << "Unrecognised input, please try again.\n";
-			break;
-		}
-	} while (true);
 }
 
 TreeMap<char, BinaryTree<string>> readTXTFile()
@@ -97,24 +71,4 @@ TreeMap<char, BinaryTree<string>> readTXTFile()
 	}
 
 	return treeMap;
-}
-
-template <class T>
-void print(BinaryTree<T> tree, int sort)
-{
-	switch (sort)
-	{
-	case 1:
-		tree.printInOrder();
-		break;
-	case 2:
-		tree.printPreOrder();
-		break;
-	case 3:
-		tree.printPostOrder();
-		break;
-	default:
-		cout << "Error occured with sorting.\n";
-		break;
-	}
 }

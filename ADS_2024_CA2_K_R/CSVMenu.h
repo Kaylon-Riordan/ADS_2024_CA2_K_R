@@ -4,6 +4,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include "Print.h"
 
 struct carDetails {
 	string make;
@@ -19,9 +20,5 @@ struct carDetails {
 void sortByIndexOrFilter();
 
 void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap);
-int chooseSortOrder();
 
 TreeMap<string, carDetails> readCSVFile();
-
-template <class T>
-void print(BinaryTree<T>, int sort);

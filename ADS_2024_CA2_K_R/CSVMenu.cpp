@@ -22,43 +22,24 @@ void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap)
 			cout << "Returning to main.\n";
 			break;
 		case 1:
-			printTree(treeMap.getBinaryTree(), chooseTreeSortOrder());
+			cout << left << setw(25) << setfill(' ') << "| ID";
+			cout << left << setw(20) << setfill(' ') << "| Make";
+			cout << left << setw(20) << setfill(' ') << "| Model";
+			cout << left << setw(10) << setfill(' ') << "| Year";
+			cout << left << setw(25) << setfill(' ') << "| Owner" << "|\n";
+			printTree(treeMap.getBinaryTree().root);
 			break;
 		case 2:
-			printTree(chooseIndexField(treeMap).getBinaryTree(), chooseTreeSortOrder());
+			printTreeIndex(chooseIndexField(treeMap).getBinaryTree().root);
 			break;
 		case 3:
-			printTree(chooseFilterField(treeMap).getBinaryTree(), chooseTreeSortOrder());
+			printTree(chooseFilterField(treeMap).getBinaryTree().root);
 			break;
 		default:
 			cout << "Unrecognised input, please try again.\n";
 			break;
 		}
 	} while (input != 0);
-}
-int chooseTreeSortOrder()
-{
-	int input;
-	do
-	{
-		cout << "\nHow would you like the data sorted: \n1: In order. \n2: Pre order. \n3: Post order. \nChoice:   ";
-
-		cin >> input;
-		cout << endl;
-
-		switch (input)
-		{
-		case 1:
-			return 1;
-		case 2:
-			return 2;
-		case 3:
-			return 3;
-		default:
-			cout << "Unrecognised input, please try again.\n";
-			break;
-		}
-	} while (true);
 }
 
 TreeMap<string, int> chooseIndexField(TreeMap<string, carDetails> tree)
@@ -74,6 +55,8 @@ TreeMap<string, int> chooseIndexField(TreeMap<string, carDetails> tree)
 		TreeMap<string, int> newTree;
 
 		indexNodes(tree.getBinaryTree().root, newTree, field);
+		cout << left << setw(25) << setfill(' ') << "| Index";
+		cout << left << setw(10) << setfill(' ') << "| Count" << "|\n";
 		return newTree;
 	} while (true);
 }
@@ -102,6 +85,11 @@ TreeMap<string, carDetails> chooseFilterField(TreeMap<string, carDetails> tree)
 				if (tree.containsKey(input))
 				{
 					newTree.put(input, tree.get(input));
+					cout << left << setw(25) << setfill(' ') << "| ID";
+					cout << left << setw(20) << setfill(' ') << "| Make";
+					cout << left << setw(20) << setfill(' ') << "| Model";
+					cout << left << setw(10) << setfill(' ') << "| Year";
+					cout << left << setw(25) << setfill(' ') << "| Owner" << "|\n";
 					return newTree;
 				}
 				else
@@ -125,6 +113,11 @@ TreeMap<string, carDetails> chooseFilterField(TreeMap<string, carDetails> tree)
 				filterNodes(tree.getBinaryTree().root, newTree, field, input);
 				if (newTree.size() != 0)
 				{
+					cout << left << setw(25) << setfill(' ') << "| ID";
+					cout << left << setw(20) << setfill(' ') << "| Make";
+					cout << left << setw(20) << setfill(' ') << "| Model";
+					cout << left << setw(10) << setfill(' ') << "| Year";
+					cout << left << setw(25) << setfill(' ') << "| Owner" << "|\n";
 					return newTree;
 				}
 				else
@@ -271,22 +264,38 @@ TreeMap<string, carDetails> readCSVFile()
 	return treeMap;
 }
 
-template <class T>
-void printTree(BinaryTree<T> tree, int sort)
+void printTree(BSTNode<Entity<string, carDetails>>* root)
 {
-	switch (sort)
+	BSTNode<Entity<string, carDetails>> node = *root;
+
+	cout << left << setw(25) << setfill(' ') << "| " + node.getItem().getKey();
+	cout << left << setw(20) << setfill(' ') << "| " + node.getItem().getValue().make;
+	cout << left << setw(20) << setfill(' ') << "| " + node.getItem().getValue().model;
+	cout << left << setw(10) << setfill(' ') << "| " + to_string(node.getItem().getValue().year);
+	cout << left << setw(25) << setfill(' ') << "| " + node.getItem().getValue().owner << "|\n";;
+
+	if (node.getLeft() != nullptr)
 	{
-	case 1:
-		tree.printInOrder();
-		break;
-	case 2:
-		tree.printPreOrder();
-		break;
-	case 3:
-		tree.printPostOrder();
-		break;
-	default:
-		cout << "Error occured with sorting.\n";
-		break;
+		printTree(node.getLeft());
+	}
+	if (node.getRight() != nullptr)
+	{
+		printTree(node.getRight());
+	}
+}
+void printTreeIndex(BSTNode<Entity<string, int>>* root)
+{
+	BSTNode<Entity<string, int>> node = *root;
+
+	cout << left << setw(25) << setfill(' ') << "| " + node.getItem().getKey();
+	cout << left << setw(10) << setfill(' ') << "| " + to_string(node.getItem().getValue()) << "|\n";;
+
+	if (node.getLeft() != nullptr)
+	{
+		printTreeIndex(node.getLeft());
+	}
+	if (node.getRight() != nullptr)
+	{
+		printTreeIndex(node.getRight());
 	}
 }

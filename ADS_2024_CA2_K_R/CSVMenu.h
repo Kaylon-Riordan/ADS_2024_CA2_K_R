@@ -4,6 +4,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <iomanip>
 
 struct carDetails {
 	string make;
@@ -19,7 +20,6 @@ struct carDetails {
 void sortByIndexOrFilter();
 
 void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap);
-int chooseTreeSortOrder();
 
 TreeMap<string, int> chooseIndexField(TreeMap<string, carDetails> tree);
 TreeMap<string, carDetails> chooseFilterField(TreeMap<string, carDetails> tree);
@@ -29,5 +29,5 @@ void filterNodes(BSTNode<Entity<string, carDetails>>* root, TreeMap<string, carD
 
 TreeMap<string, carDetails> readCSVFile();
 
-template <class T>
-void printTree(BinaryTree<T> tree, int sort);
+void printTree(BSTNode<Entity<string, carDetails>>* root);
+void printTreeIndex(BSTNode<Entity<string, int>>* root);

@@ -7,22 +7,31 @@ void sortByIndexOrFilter()
 	cars.keySet().printInOrder();
 }
 
+void chooseIndexOrFilter(TreeMap<char, BinaryTree<string>> treeMap)
+{
+
+}
+
 TreeMap<string, carDetails> readCSVFile()
 {
 	TreeMap<string, carDetails> treeMap;
 
 	fstream read;
 	read.open("..\\cars.csv", ios::in);
-	string id, make, model, owner;
-	int year;
-	while (read >> id)
+	string line;
+	while (getline(read, line))
 	{
+		string id, make, model, owner, yearTemp;
+		int year;
 		carDetails details;
+		stringstream row(line);
 
-		read >> make;
-		read >> model;
-		read >> year;
-		read >> owner;
+		getline(row, id, ',');
+		getline(row, make, ',');
+		getline(row, model, ',');
+		getline(row, yearTemp, ',');
+		year = stoi(yearTemp);
+		getline(row, owner, ',');
 
 		details.make = make;
 		details.model = model;
@@ -31,6 +40,25 @@ TreeMap<string, carDetails> readCSVFile()
 
 		treeMap.put(id, details);
 	}
-
 	return treeMap;
+}
+
+template <class T>
+void print(BinaryTree<T> tree, int sort)
+{
+	switch (sort)
+	{
+	case 1:
+		tree.printInOrder();
+		break;
+	case 2:
+		tree.printPreOrder();
+		break;
+	case 3:
+		tree.printPostOrder();
+		break;
+	default:
+		cout << "Error occured with sorting.\n";
+		break;
+	}
 }

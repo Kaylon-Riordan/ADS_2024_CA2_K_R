@@ -99,7 +99,6 @@ TreeMap<char, BinaryTree<string>> readTXTFile()
 	return treeMap;
 }
 
-
 template <class T>
 void print(BinaryTree<T> tree, int sort)
 {

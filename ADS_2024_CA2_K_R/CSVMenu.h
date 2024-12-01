@@ -18,7 +18,8 @@ struct carDetails {
 
 void sortByIndexOrFilter();
 
-void chooseIndexOrFilter(TreeMap<char, BinaryTree<string>> treeMap);
+void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap);
+int chooseSortOrder();
 
 TreeMap<string, carDetails> readCSVFile();
 

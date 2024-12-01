@@ -3,13 +3,66 @@ using namespace std;
 
 void sortByIndexOrFilter()
 {
-	TreeMap<string, carDetails> cars = readCSVFile();
-	cars.keySet().printInOrder();
+	chooseIndexOrFilter(readCSVFile());
 }
 
-void chooseIndexOrFilter(TreeMap<char, BinaryTree<string>> treeMap)
+void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap)
 {
+	int input;
+	do
+	{
+		cout << "\nWhat would you like to view: \n1: View all data. \n2: View index for a specified field. \n3: View filter for a specified value. \n0: Back to main menu. \nChoice:   ";
 
+		cin >> input;
+		cout << endl;
+
+		switch (input)
+		{
+		case 0:
+			cout << "Returning to main.\n";
+			break;
+		case 1:
+			print(treeMap.keySet(), chooseSortOrder());
+			break;
+		case 2:
+			//print(treeMap.keySet(), chooseSortOrder());
+			break;
+		case 3:
+			//print(treeMap.getBinaryTree(), chooseSortOrder());
+			break;
+		default:
+			cout << "Unrecognised input, please try again.\n";
+			break;
+		}
+	} while (input != 0);
+}
+
+int chooseSortOrder()
+{
+	int input;
+	do
+	{
+		cout << "\nHow would you like the data sorted: \n1: In order. \n2: Pre order. \n3: Post order. \nChoice:   ";
+
+		cin >> input;
+		cout << endl;
+
+		switch (input)
+		{
+		case 1:
+			return 1;
+			break;
+		case 2:
+			return 2;
+			break;
+		case 3:
+			return 3;
+			break;
+		default:
+			cout << "Unrecognised input, please try again.\n";
+			break;
+		}
+	} while (true);
 }
 
 TreeMap<string, carDetails> readCSVFile()

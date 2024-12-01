@@ -1,2 +1,5 @@
 ﻿  CSVMenu.cpp
-  ADS_2024_CA2_K_R.vcxproj -> C:\Users\kaylo\OneDrive\Documents\GitHub\ADS_2024_CA2_K_R\ADS_2024_CA2_K_R\x64\Debug\ADS_2024_CA2_K_R.exe
+  main.cpp
+  Generating Code...
+TXTMenu.obj : error LNK2005: "int __cdecl chooseSortOrder(void)" (?chooseSortOrder@@YAHXZ) already defined in CSVMenu.obj
+C:\Users\kaylo\OneDrive\Documents\GitHub\ADS_2024_CA2_K_R\ADS_2024_CA2_K_R\x64\Debug\ADS_2024_CA2_K_R.exe : fatal error LNK1169: one or more multiply defined symbols found

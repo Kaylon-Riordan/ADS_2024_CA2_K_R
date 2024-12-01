@@ -25,7 +25,7 @@ void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap)
 			printTree(treeMap.getBinaryTree(), chooseTreeSortOrder());
 			break;
 		case 2:
-			//write(treeMap.keySet());
+			printTree(chooseIndexField(treeMap).getBinaryTree(), chooseTreeSortOrder());
 			break;
 		case 3:
 			printTree(chooseFilterField(treeMap).getBinaryTree(), chooseTreeSortOrder());
@@ -36,7 +36,6 @@ void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap)
 		}
 	} while (input != 0);
 }
-
 int chooseTreeSortOrder()
 {
 	int input;
@@ -59,6 +58,23 @@ int chooseTreeSortOrder()
 			cout << "Unrecognised input, please try again.\n";
 			break;
 		}
+	} while (true);
+}
+
+TreeMap<string, int> chooseIndexField(TreeMap<string, carDetails> tree)
+{
+	int field;
+	do
+	{
+		cout << "\nWhat field would you like to filter by: \n1: ID. \n2: Make. \n3: Model. \n4: Year. \n5: Owner. \nChoice:   ";
+
+		cin >> field;
+		cout << endl;
+
+		TreeMap<string, int> newTree;
+
+		indexNodes(tree.getBinaryTree().root, newTree, field);
+		return newTree;
 	} while (true);
 }
 TreeMap<string, carDetails> chooseFilterField(TreeMap<string, carDetails> tree)
@@ -92,21 +108,21 @@ TreeMap<string, carDetails> chooseFilterField(TreeMap<string, carDetails> tree)
 				{
 					cout << "Unrecognised input, please try again.\n";
 				}
-
 			} while (true);
-
-		break;
+			break;
 		case 2: case 3: case 4: case 5:
- 			do
+			do
 			{
+				// clear cin so its not reading old inputs, was causing repeating loop bug
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
 				string input;
-				cout << "\nWhat make would you like to filter for: \nChoice:   ";
+				cout << "\nWhat data would you like to filter for: \nChoice:   ";
 
 				getline(cin, input);
 				cout << endl;
 
 				filterNodes(tree.getBinaryTree().root, newTree, field, input);
-
 				if (newTree.size() != 0)
 				{
 					return newTree;
@@ -115,7 +131,6 @@ TreeMap<string, carDetails> chooseFilterField(TreeMap<string, carDetails> tree)
 				{
 					cout << "Unrecognised input, please try again.\n";
 				}
-
 			} while (true);
 
 			break;
@@ -124,6 +139,62 @@ TreeMap<string, carDetails> chooseFilterField(TreeMap<string, carDetails> tree)
 			break;
 		}
 	} while (true);
+}
+
+void indexNodes(BSTNode<Entity<string, carDetails>>* root, TreeMap<string, int>& tree, int field)
+{
+	BSTNode<Entity<string, carDetails>> node = *root;
+
+	switch (field)
+	{
+	case 1:
+		if (!tree.containsKey(node.getItem().getKey()))
+		{
+			tree.put(node.getItem().getKey(), 0);
+		}
+		tree.put(node.getItem().getKey(), tree.get(node.getItem().getKey()) + 1);
+		break;
+	case 2:
+		if (!tree.containsKey(node.getItem().getValue().make))
+		{
+			tree.put(node.getItem().getValue().make, 0);
+		}
+		tree.put(node.getItem().getValue().make, tree.get(node.getItem().getValue().make) + 1);
+		break;
+	case 3:
+		if (!tree.containsKey(node.getItem().getValue().model))
+		{
+			tree.put(node.getItem().getValue().model, 0);
+		}
+		tree.put(node.getItem().getValue().model, tree.get(node.getItem().getValue().model) + 1);
+		break;
+	case 4:
+		if (!tree.containsKey(to_string(node.getItem().getValue().year)))
+		{
+			tree.put(to_string(node.getItem().getValue().year), 0);
+		}
+		tree.put(to_string(node.getItem().getValue().year), tree.get(to_string(node.getItem().getValue().year)) + 1);
+		break;
+	case 5:
+		if (!tree.containsKey(node.getItem().getValue().owner))
+		{
+			tree.put(node.getItem().getValue().owner, 0);
+		}
+		tree.put(node.getItem().getValue().owner, tree.get(node.getItem().getValue().owner) + 1);
+		break;
+	default:
+		cout << "Error with field input.\n";
+		break;
+	}
+
+	if (node.getLeft() != nullptr)
+	{
+		indexNodes(node.getLeft(), tree, field);
+	}
+	if (node.getRight() != nullptr)
+	{
+		indexNodes(node.getRight(), tree, field);
+	}
 }
 void filterNodes(BSTNode<Entity<string, carDetails>>* root, TreeMap<string, carDetails>& tree, int field, string input)
 {
@@ -200,7 +271,8 @@ TreeMap<string, carDetails> readCSVFile()
 	return treeMap;
 }
 
-void printTree(BinaryTree<Entity<string, carDetails>> tree, int sort)
+template <class T>
+void printTree(BinaryTree<T> tree, int sort)
 {
 	switch (sort)
 	{

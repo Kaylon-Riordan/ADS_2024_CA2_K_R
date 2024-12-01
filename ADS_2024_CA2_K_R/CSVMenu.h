@@ -21,11 +21,13 @@ void sortByIndexOrFilter();
 void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap);
 int chooseTreeSortOrder();
 
+TreeMap<string, int> chooseIndexField(TreeMap<string, carDetails> tree);
 TreeMap<string, carDetails> chooseFilterField(TreeMap<string, carDetails> tree);
+
+void indexNodes(BSTNode<Entity<string, carDetails>>* root, TreeMap<string, int>& tree, int field);
 void filterNodes(BSTNode<Entity<string, carDetails>>* root, TreeMap<string, carDetails>& tree, int field, string input);
 
 TreeMap<string, carDetails> readCSVFile();
 
-void printTree(BinaryTree<Entity<string, carDetails>> tree, int sort);
 template <class T>
-void printIndex(BinaryTree<T> tree, int sort);
+void printTree(BinaryTree<T> tree, int sort);

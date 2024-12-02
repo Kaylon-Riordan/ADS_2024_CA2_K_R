@@ -22,6 +22,7 @@ public:
 	bool operator== (Entity<K, V>& other);
 	bool operator> (Entity<K, V>& other);
 	bool operator< (Entity<K, V>& other);
+	// overload the outstream operator to print the calss easier
 	friend std::ostream& operator<<(std::ostream& out, const Entity<K, V>& entity) {
 		out << "Key: " << entity.key << " | Value: " << entity.value;
 		return out;
@@ -77,6 +78,7 @@ void Entity<K, V>::print()
 	cout << "Key: " << this->key << " | Value: " << this->value << endl;
 }
 
+// overlaod comparison operators to compare items while sorting tree
 template <typename K, typename V>
 bool Entity<K, V>::operator== (Entity<K, V>& other)
 {

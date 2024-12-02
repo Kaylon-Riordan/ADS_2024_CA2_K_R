@@ -6,20 +6,15 @@
 #include <string>
 #include <iomanip>
 
+// create a struct to hold the last 4 details of the cars csv, the id will be stored as the key of the entity
 struct carDetails {
 	string make;
 	string model;
 	int year;
 	string owner;
-	friend std::ostream& operator<<(std::ostream& out, const carDetails& entity) {
-		out << "[Make: " << entity.make << ", Model: " << entity.model << ", Year: " << entity.year << ", Owner: " << entity.owner << "]";
-		return out;
-	}
 };
 
-void sortByIndexOrFilter();
-
-void chooseIndexOrFilter(TreeMap<string, carDetails> treeMap);
+void chooseIndexOrFilter();
 
 TreeMap<string, int> chooseIndexField(TreeMap<string, carDetails> tree);
 TreeMap<string, carDetails> chooseFilterField(TreeMap<string, carDetails> tree);

@@ -25,11 +25,14 @@ public:
 	void printPostOrder(BSTNode<T>* node);
 	T* toArray();
 	~BinaryTree();
+	// overload the outstream operator to print the calss
 	friend std::ostream& operator<<(std::ostream& out, const BinaryTree<T>& tree) {
 
 		BinaryTree<T> copyTree(tree);
+		// create an array of all items in the tree
 		T* array = copyTree.toArray();
 		out << "{";
+		// print all the values seperated by commas
 		for (int i = 0; i < copyTree.count(); i++)
 		{
 			T item = array[i];
@@ -226,6 +229,7 @@ void BinaryTree<T>::printInOrder()
 {
 	this->printInOrder(root);
 }
+// recursively print in the order left, parent, right
 template<class T>
 void BinaryTree<T>::printInOrder(BSTNode<T>* node)
 {
@@ -247,6 +251,7 @@ void BinaryTree<T>::printPreOrder()
 	cout << endl;
 }
 template<class T>
+// recursively print in the order parent, left, right
 void BinaryTree<T>::printPreOrder(BSTNode<T>* node)
 {
 	BSTNode<T> n = *node;
@@ -267,6 +272,7 @@ void BinaryTree<T>::printPostOrder()
 	cout << endl;
 }
 template<class T>
+// recursively print in the order left, right, parent
 void BinaryTree<T>::printPostOrder(BSTNode<T>* node)
 {
 	BSTNode<T> n = *node;

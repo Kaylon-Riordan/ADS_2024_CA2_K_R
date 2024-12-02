@@ -3,9 +3,7 @@
 #include <iostream>
 #include <fstream>
 
-void sortByInitial();
-
-void chooseTree(TreeMap<char, BinaryTree<string>> treeMap);
+void chooseTree();
 int chooseSortOrder();
 
 TreeMap<char, BinaryTree<string>> readTXTFile();
